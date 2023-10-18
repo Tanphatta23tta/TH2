@@ -3,17 +3,20 @@
 void Xuat();
 void Max();
 void Tich();
-void SX();
+void Chen();
+void Xoa();
 
 
 
-	int a[10],i,n,max,tich,tam,j;
+	int a[10],i,n,max,tich,c,k;
 int main()
+
 {
 
 	printf("\n Nhap phan tu cua mang n: ");
 	scanf("%d",&n);
 	for (i=0;i<n;i++)
+
 	{
 		printf ("\n Nhap a[%d]= ",i);
 		scanf ("%d",&a[i]);
@@ -22,16 +25,19 @@ int main()
 	Xuat();
 	Max();
 	Tich();
-	SX();
+	Chen();
+	Xoa();
+	
 	getch();
 	
 }
-void Xuat()
+	void Xuat()
 	
 	{
 		for (i=0;i<n;i++)
 		printf(" \n Phan tu thu a[%d]=%d ",i,a[i]);
 	}
+
 void Max()
 {
 	int max=a[0],i;
@@ -55,47 +61,30 @@ void Tich()
 	
 printf("\n Tich cua phan tu la: %d",tich);
 }
-/*
-int ktsnt(int n)
+void Chen()
 {
-	int i;
-	if(n<2) return 0;
-	for (i=2;i<=n;i++)
-	if (n%i==0)
-	return 0;
-	return 1;
+	printf("\n Nhap x can chen: ");
+	scanf("%d",&c);
+	c==a[n];
+	Xuat();
+	printf("\n Phan tu thu a[%d]=%d",n,c);
 }
-void dem(int a[],int n)
-{
-	int densnt=0;
-    for(int i=0;i<n;i++)
-    {
-    	if (kiemtrasnt(a[i])==true)
-    	demsnt=demsnt+1;
-    }
-    printf("\n snt la: %d",demsnt)
 
-}
-*/
-
-void SX()
+	void Xoa()
 {
-	int tam,i,j;
-	for(i=0;i<n-1;i++)
-	for (j=i+1;i<j;j++)
-	if (a[i]>a[j])
+	
+		printf("\n Nhap x can xoa: ");
+		scanf("%d",&k);
+		
 	{
-		tam=a[i];
-		a[i]=a[j];
-		a[j]=tam;
-	}
-	printf("\n mang duoc sap xep: ");
 	
-	getch();
+	for (i=0;i<n;i++)
+	if (a[i]== k)
+	printf("");
+	else
+	printf("\n a[%d]=%d",i,a[i]);
+    }
+
+	
 }
-
-	
-
-	
-
 	
