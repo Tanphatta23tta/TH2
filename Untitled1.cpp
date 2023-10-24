@@ -3,12 +3,13 @@
 void Xuat();
 void Max();
 void Tich();
-void Chen();
+void timx();
+void SX();
 void Xoa();
 
 
 
-	int a[10],i,n,max,tich,c,k;
+	int a[10],i,n,max,tich,c,k,tam,x;
 int main()
 
 {
@@ -25,7 +26,11 @@ int main()
 	Xuat();
 	Max();
 	Tich();
-	Chen();
+		timx();
+	printf("\n Sau khi sap xep ");
+
+	SX();
+	Xuat();
 	Xoa();
 	
 	getch();
@@ -61,13 +66,27 @@ void Tich()
 	
 printf("\n Tich cua phan tu la: %d",tich);
 }
-void Chen()
+void timx()
 {
-	printf("\n Nhap x can chen: ");
-	scanf("%d",&c);
-	c==a[n];
-	Xuat();
-	printf("\n Phan tu thu a[%d]=%d",n,c);
+	printf("\n Nhap x can tim trong mang: ");
+	scanf("%d",&x);
+	{
+		for (i=0;i<n;i++)
+		if (a[i]==x)
+		printf("\n X can tim a[%d] ",i);
+	}
+}
+void SX()
+{
+	int tam,i,j;
+	for(i=0;i<n-1;i++)
+	for(j=i+1;j<n;j++)
+	if(a[i]>a[j])
+	{	
+		tam=a[i];
+		a[i]=a[j];
+		a[j]=tam;
+	}
 }
 
 	void Xoa()
@@ -77,7 +96,7 @@ void Chen()
 		scanf("%d",&k);
 		
 	{
-	
+	printf("\n Mang sau khi xoa di %d la: ",k);
 	for (i=0;i<n;i++)
 	if (a[i]== k)
 	printf("");
@@ -87,4 +106,5 @@ void Chen()
 
 	
 }
+
 	
