@@ -3,13 +3,15 @@
 void Xuat();
 void Max();
 void Tich();
+void ktsnt();
+void tongsnt();
 void timx();
 void SX();
 void Xoa();
 
 
 
-	int a[10],i,n,max,tich,c,k,tam,x;
+	int a[10],i,n,max,tich,c,k,tam,x,tong;
 int main()
 
 {
@@ -26,6 +28,10 @@ int main()
 	Xuat();
 	Max();
 	Tich();
+	ktsnt();
+	printf("\n co %d phan tu la snt ",x);
+	tongsnt();
+		printf("\n tong cac phan tu la snt= %d",tong);
 		timx();
 	printf("\n Sau khi sap xep ");
 
@@ -66,6 +72,24 @@ void Tich()
 	
 printf("\n Tich cua phan tu la: %d",tich);
 }
+void ktsnt()
+{
+	for(i=0;i<n;i++)
+	if (a[i]==2||a[i]==3||a[i]==5||a[i]==7)
+	x=x+1;
+	   if (x%2!=0 && x%3!=0 &&x%5!=0 && x%7!=0)
+	   x=x+1;
+}
+void tongsnt()
+{
+		for(int i=0;i<n;i++)
+	if (a[i]==2||a[i]==3||a[i]==5||a[i]==7)
+	tong=tong+a[i];
+	   if (x%2!=0 && x%3!=0 &&x%5!=0 && x%7!=0)
+	   tong=tong+a[i];
+}
+
+ 
 void timx()
 {
 	printf("\n Nhap x can tim trong mang: ");
@@ -76,6 +100,7 @@ void timx()
 		printf("\n X can tim a[%d] ",i);
 	}
 }
+
 void SX()
 {
 	int tam,i,j;
