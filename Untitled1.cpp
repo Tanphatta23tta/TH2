@@ -11,7 +11,7 @@ void Xoa();
 
 
 
-	int a[10],i,n,max,tich,c,k,tam,x,tong;
+	int a[10],i,n,max,tich,c,k,tam,x,tong,e,g;
 int main()
 
 {
@@ -113,12 +113,23 @@ void SX()
 		a[j]=tam;
 	}
 }
+/*
+void chen()
+{
+	printf("\n Nhap x can chen: ");
+	scanf("%d",&e);
+	{
+		printf("\n mang da duoc chen: ",e);
 
+}
+}
+*/
 	void Xoa()
 {
 	
 		printf("\n Nhap x can xoa: ");
 		scanf("%d",&k);
+		
 		
 	{
 	printf("\n Mang sau khi xoa di %d la: ",k);
